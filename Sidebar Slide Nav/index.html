@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar Navigation</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidebarBtn').click(function () {
+                $('.sidebar').toggleClass('active')
+            })
+        })
+    </script>
+</head>
+
+
+<body>
+    <div class="sidebar">
+        <ul>
+            <li class="menu-links"><a href="">About</a></li>
+            <li class="menu-links"><a href="">Home</a></li>
+            <li class="menu-links"><a href="">Contact</a></li>
+            <li class="menu-links"><a href="">POrtfolio</a></li>
+            <li class="menu-links"><a href="">Exit</a></li>
+        </ul>
+
+        <button class="sidebarBtn">
+            <span></span>
+        </button>
+
+    </div>
+    
+</body>
+</html>
