@@ -1,4 +1,4 @@
-### #100DaysCodeChallenge
+### 100DaysCodeChallenge
 
 In this self challenge I want to do things slowly and piece by piece to understand more of HTML, CSS and Javascript.
 
