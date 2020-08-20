@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML+CSS+JS</title>
+</head>
+
+<body id="whole">
+    <div class="container">
+        <div class="another-container">
+            <p id="show" style="color:#000000"> 0 </p>
+            <button id="click-btn--add">Add</button>
+            <button id="click-btn--subtract">Subtract</button>
+        </div>
+
+        <div class="below">
+            <h3 id="placeholder" style="display: none;"> Welcome Home</h3>
+            <button id="showandhide">Show and Hide</button>
+            <button id="darkmode">Enable Dark Mode</button>
+
+        </div>
+    </div>
+</body>
+<style>
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    #click-btn--add {
+        padding: 50px;
+
+    }
+
+    #click-btn--subtract {
+        padding: 50px
+    }
+
+    .below {
+        transition: 0.3s ease-in-out;
+    }
+
+    .addbtn {
+        background: #000000;
+        color: #fff;
+    }
+
+    .nowhole {
+        background: #130f40;
+        color: #fff;
+    }
+</style>
+
+<script>
+    let addId = document.getElementById('show');
+    let addButton = document.getElementById('click-btn--add');
+    let subtractButton = document.getElementById('click-btn--subtract');
+    let showAndHideBtn = document.getElementById('showandhide');
+    let wholeBtn = document.getElementById('whole');
+    let darkBtn = document.getElementById('darkmode');
+    let myDiv = document.getElementById("placeholder");
+    let newNum = 0;
+
+
+    darkBtn.addEventListener('click', () => {
+
+        if (myDiv.style.color === "#000000") {
+            myDiv.style.color = "#fff";
+        }
+        if (myDiv.style.color === "#fff") {
+            myDiv.style.color = "#000000";
+        }
+
+        wholeBtn.classList.toggle('nowhole');
+        // addId.classList.toggle('nowhole');
+        addButton.classList.toggle('addbtn');
+        subtractButton.classList.toggle('addbtn');
+    })
+
+
+    showAndHideBtn.addEventListener('click', function () {
+
+
+        if (myDiv.style.display === "none" && wholeBtn.classList.contains('nowhole')) {
+            myDiv.style.display = "block";
+            myDiv.style.color = "#fff";
+        } else if (myDiv.style.display === "none" && !wholeBtn.classList.contains('nowhole')) {
+            myDiv.style.display = "block";
+            myDiv.style.color = "#000000";
+        } else {
+            myDiv.style.display = "none";
+        }
+    })
+    addButton.addEventListener('click', function () {
+
+        console.log('Add was clicked');
+        newNum = newNum + 1;
+        addId.innerHTML = newNum;
+    })
+
+    subtractButton.addEventListener('click', function () {
+
+        console.log('Subtract was clicked');
+        newNum = newNum - 1;
+        addId.innerHTML = newNum;
+    })
+</script>
+
+</html>
