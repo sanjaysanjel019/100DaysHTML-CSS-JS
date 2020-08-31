@@ -1,135 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins:ital,wght@0,200;0,600;0,700;1,300&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Alata',
-        sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Alata', sans-serif;
 }
 
 a {
-    text-decoration: none;
-
+	text-decoration: none;
 }
 
 .animation-style {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
 }
 
 .hover-effect {
-    font-size: 2em;
-    font-weight: 700;
-    position: relative;
+	font-size: 2em;
+	font-weight: 700;
+	position: relative;
 }
 
 /* Left to right*/
 
 .hover-effect--left::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-    height: 8px;
-    background: #c44569;
-    transition: 0.5s ease;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 20%;
+	height: 8px;
+	background: #c44569;
+	transition: 0.5s ease;
 }
 
 .hover-effect--left:hover::after {
-
-
-    width: 100%
+	width: 100%;
 }
-
 
 /*  Right to left*/
 .hover-effect--right::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 20%;
-    height: 8px;
-    background: #c44569;
-    transition: 0.8s ease;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 20%;
+	height: 8px;
+	background: #c44569;
+	transition: 0.8s ease;
 }
 
 .hover-effect--right:hover::after {
-
-    width: 100%
+	width: 100%;
 }
 
 /*  Into Out*/
 
 .hover-effect--intoout::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 8px;
-    background: #c44569;
-    transition: 0.8s ease;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 8px;
+	background: #c44569;
+	transition: 0.8s ease;
 }
 
 .hover-effect--intoout::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    width: 0;
-    height: 8px;
-    background: #c44569;
-    transition: 0.8s ease;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	width: 0;
+	height: 8px;
+	background: #c44569;
+	transition: 0.8s ease;
 }
 
 .hover-effect--intoout:hover::after {
-
-    width: 50%
+	width: 50%;
 }
 
 .hover-effect--intoout:hover::before {
-
-    width: 50%
+	width: 50%;
 }
 
 /*Out to In*/
 .hover-effect--outtoin::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0%;
-    width: 0%;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0%;
+	width: 0%;
 
-    height: 8px;
-    background: #c44569;
-    transition: 0.8s ease;
+	height: 8px;
+	background: #c44569;
+	transition: 0.8s ease;
 }
 
 .hover-effect--outtoin::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0%;
-    width: 0%;
-    height: 8px;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0%;
+	width: 0%;
+	height: 8px;
 
-    background: #c44569;
-    transition: 0.8s ease;
+	background: #c44569;
+	transition: 0.8s ease;
 }
 
 .hover-effect--outtoin:hover::after {
-
-    width: 100%
+	width: 100%;
 }
 
 .hover-effect--outtoin:hover::before {
-
-    width: 100%
+	width: 100%;
 }
