@@ -12,6 +12,11 @@ I will be updating it everyday and the changes will be incremental  over time.
 5) [Border animation](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/5.0%20Border%20animation)
 6) [Parallax Scrolling](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/6.0%20Parallax%20Scrolling)
 7) [Centering DIV with CSS Grid](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/7.0%20%20Centering%20Div)
-8) Followover Image Panel with Tilt.js
-9) Skew Hover Image Effect
+8) [Followover Image Panel with Tilt.js](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/8.0%20Followover%20image%20Panel)
+9) [Skew Hover Image Effect](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/9.0%20Skew%20Text)
+10) [Basic JS] (https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/10.0%20Basic%20JS)
+11) -
+12) [Introducing Bootstrap]()
+13) [Image Offset Hover Effects](https://github.com/sanjaysanjel019/100DaysHTML-CSS-JS/tree/master/13.0%20Image%20Placement)
+14) [Modern Product Card using Tailwind]()
 
