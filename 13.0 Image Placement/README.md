@@ -5,5 +5,5 @@ In this tutorial, I learnt to use a property called `outline-offset` which allow
 
 
 
-**Here is the LIVE example of the menu**
+**Here is the LIVE example of the stylsh offset effect**
 [CodePen Link!](https://codepen.io/sanjaysanjel/pen/WNwEvJW)
