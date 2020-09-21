@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="accordion">
+        <div class="contentBox">
+            <div class="label">List One</div>
+            <div class="content">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut tempora nulla eveniet natus! Ullam, 
+                    libero labore tempore rem ratione impedit nulla provident. Accusamus neque ratione aperiam, odit at atque ipsa?</p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">List Two</div>
+            <div class="content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius sapiente, in soluta veritatis quis quidem 
+                    repudiandae praesentium dolorum quos deleniti quisquam, adipisci aperiam quas culpa fuga perspiciatis voluptatum
+                     aliquam? Architecto?</p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">List Three</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusamus debitis, necessitatibus exercitationem blanditiis 
+                    sit, nesciunt eveniet, consequatur dolorem eligendi provident soluta! Accusamus sed labore ea illum corrupti magnam veniam!</p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">List Four</div>
+            <div class="content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut et vero non voluptatibus id ipsa ullam voluptates libero?
+                     Inventore ipsam quasi voluptate accusantium? Alias, iusto excepturi eaque saepe beatae consequuntur!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.querySelectorAll('.contentBox');
+        for(i=0;i<accordion.length;i++){
+            accordion[i].addEventListener('click', function(){
+                this.classList.toggle('active');
+            })
+        }
+    </script>
+</body>
+</html>
+
+<style>
+    body{
+        font-family: 'Kumbh Sans', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        margin: 20px;
+        background: #fbc531;
+    }
+    .accordion{
+        max-width: 800px;
+    }
+    .accordion .contentBox{
+        position: relative;
+        margin: 10px 20px;
+    }
+    .accordion .contentBox .label{
+            position: relative;
+            padding: 10px;
+            background: #00a8ff;
+            cursor: pointer;
+    }
+    .accordion .contentBox .label::before{
+        content: '+';
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+    }
+     .accordion .contentBox.active .label::before{
+        content: '-';
+        
+    }
+    .accordion .contentBox .content{
+        position: relative;
+        /* padding: 10px; */
+        background: #fff;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: auto;
+    }
+
+    .accordion .contentBox.active .content{
+        height: 150px;
+        padding: 10px;
+    }
+
+
+
+</style>

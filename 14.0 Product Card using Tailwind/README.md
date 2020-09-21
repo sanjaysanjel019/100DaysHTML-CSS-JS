@@ -5,5 +5,5 @@ In this tutorial, I dived more into the Tailwind and created this modern-looking
 
 
 
-**Here is the LIVE example of the menu**
+**Here is the LIVE example of the card**
 [CodePen Link!](https://codepen.io/sanjaysanjel/pen/dyMKOZK?editors=1100)
