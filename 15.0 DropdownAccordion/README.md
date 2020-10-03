@@ -1,6 +1,4 @@
 
-
-
 ### Day 14
 
 Here I used a basic accordion using JS and basic styling to know how it is actually created.
