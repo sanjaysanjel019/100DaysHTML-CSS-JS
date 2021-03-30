@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Notification using JS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="alert hide">
+        <span class="fas fa-exclamation-circle"> </span>
+        <span class="msg">This is my warning text</span>
+        <span class="close-btn">
+            <span class="fas fa-times"></span>
+        </span>
+
+    </div>
+    <div class="btn-hold">
+        <button class="btn-pop">Show toast</button>
+    </div>
+    
+</body>
+
+
+<style>
+    *{
+        font-family: Poppins;
+        box-sizing:border-box;
+        padding:0;
+        margin:0;
+    }
+
+.alert{
+    background: #f1c40f;
+    padding:20px 40px;
+    min-width: 420px;
+    
+    position: absolute;
+    right:0px;
+    top:10px;
+    overflow: hidden;
+    border-radius:6px;
+    border-left:6px solid #f39c12;
+}
+
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left:20px;
+    top:50%;
+    transform: translateY(-50%);
+    color:#d35400;
+    font-size: 30px;
+}
+
+.alert .msg{
+    padding:0 20px;
+    font-size: 18px;
+}
+
+.alert .close-btn{
+    background:#e67e22;
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%);
+    padding:20px 20px;
+    cursor:pointer;
+}
+
+.alert.show{
+    animation: show_slides 1s ease  forwards;
+
+}
+
+.alert.hide{
+    animation: hide_slides 1s ease  forwards;
+
+}
+
+.alert.hide{
+display: none;
+}
+
+.btn-hold{
+    display:grid;
+    width:100%;
+    height: 100%;
+    place-items: center;
+}
+@keyframes  show_slides {
+    0%{
+        transform: translateX(100%);
+    }
+
+    50%{
+        transform:translateX(0%)
+    }
+    80%{
+        transform: translateX(-2%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+    
+}
+
+ @keyframes  hide_slides {
+    0%{
+        transform: translateX(100%);
+    }
+
+    50%{
+        transform:translateX(-2%)
+    }
+    80%{
+        transform: translateX(0%)
+    }
+    100%{
+        transform: translateX(-10px)
+    }
+     
+} 
+
+.close-btn:hover{
+background-color: #f39c12;
+}
+
+.close-btn .fa-times{
+    font-size: 22px;
+    line-height:40px;
+}
+</style>
+
+
+<script>
+
+const clickBtn = document.querySelector('.btn-pop');
+const toast = document.querySelector('.alert');
+const closeBtn = document.querySelector('.close-btn');
+
+clickBtn.addEventListener('click',function () {
+    toast.classList.remove("hide");
+    toast.classList.add("show");
+    
+    // setTimeout(function (){
+    //      toast.classList.remove("show");
+    //      toast.classList.add("hide");
+    // },1000);
+})
+
+closeBtn.addEventListener('click',function (){
+    toast.classList.remove("show");
+    toast.classList.add("hide");
+})
+    </script>
+</html>
